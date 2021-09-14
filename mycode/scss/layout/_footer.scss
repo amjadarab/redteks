@@ -1,0 +1,81 @@
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+
+.footer{
+
+    /******* Footer Body *******/
+    &__body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /******* Footer Child 1 Content *******/
+    &__content{
+        flex: 0 1 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left:2rem;
+        flex-wrap: wrap;
+
+        @include respond(tab-port){
+            flex-direction: row;
+            flex: 0 1 100%;
+            padding: 4rem; 
+            text-align: center; 
+        }
+    }
+
+    &__logo{
+        width: 32rem;
+        @include respond(tab-port){
+            flex: 0 1 50%;
+            padding: 0 3rem;
+            width: 50%;
+        }
+    }
+
+    &__partners{
+        width: 27rem;
+        @include respond(tab-port){
+            padding: 0 3rem;
+            flex: 0 1 50%;
+            width: 50%;
+        }
+    }
+    
+    &__copyright{
+        color: $color-black;
+        @include respond(tab-port){
+            flex: 0 1 100%;
+            margin-top: 5rem;
+        }
+        @include respond(phone-lg){
+            font-size: 2rem;
+        }
+
+        @include respond(big-desktop){
+           font-size: 1.8rem;
+        }
+    }
+
+
+     /******* Footer Child 2 Location *******/
+    &__location{
+        flex: 1;
+        @include respond(tab-port){
+            flex: 0 1 100%;
+           
+        }
+        iframe{
+            width: 100%;
+            @include respond(tab-port){
+                height: 30rem;
+            }
+            @include respond(phone-lg){
+                height: 25rem;
+            }
+        }
+    }
+
+
+}

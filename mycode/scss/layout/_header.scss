@@ -1,0 +1,180 @@
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+
+.header{
+    height: 100vh;
+    background-image: url(/img/headerBackground.png);
+    background-size: cover;
+    background-position: center;
+
+    /* a specific media query to target the phone landscape mode */
+    @media  only screen and (hover: none),
+            only screen and (orientation: landscape){
+                height: max-content;
+    }
+
+    /******* Header Content *******/
+    &__content{
+        max-width: 114rem;
+        position: relative;
+        margin: calc(2rem + 8vh) auto 0 auto;
+        display: flex;
+        justify-content: space-between;
+        
+        /******* Header Box *******/
+        &-box{
+            &--1{
+                /******* Header Box 1 *******/
+                padding-top: 7.6rem;
+                padding-left:1rem;
+                @include respond(tab-land){
+                    flex: 0 1 70%;
+                }
+                @include respond(phone-lg){
+                    flex: 0 1 80%;
+                    padding-top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+
+                @include respond(big-desktop){
+                    flex: 0 1 70%;
+                }
+                h1{
+                    @include respond(phone-sm){
+                        font-size: 3.5rem;
+                    }
+                }
+            }
+
+            &--2{
+
+                /******* Header Box 2 *******/
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 4rem;
+                @include respond(phone-lg){
+                    margin-right: 0rem;
+                 }
+            }
+        }
+
+        /******* Header Box 1 elements styles *******/
+        &-span{
+            font-size: 3rem;
+            font-weight: lighter;
+            
+        }
+
+        &-paragraph{
+            font-size: 1.8rem;
+            max-width: 50rem;
+            margin: 4rem 0;
+            display: block;
+            @include respond(tab-land){
+                font-size: 2.2rem;
+                max-width: 90%;
+            }
+            @include respond(phone-lg){
+                font-size: 2.5rem;
+                max-width: 100%;
+            }
+            @include respond(phone-sm){
+                font-size: 2rem;
+                max-width: 100%;
+            }
+            @include respond(big-desktop){
+                font-size: 2.5rem;
+                max-width: 90%;
+            }
+
+        }
+
+        &-btn{
+            font-size: 2rem;
+            color: white;
+            outline: none;
+            border: 2px solid $color-white;
+            background: none;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+
+        /******* Header Box 1 elements styles *******/
+        &-icon{
+           margin-bottom:1.8rem ;
+           img{
+               
+               @include respond(tab-land){
+                   width: 3rem;
+                   height: 3rem;
+               }
+               @include respond(phone-lg){
+                   width: 3.5rem;
+                   height: 3.5rem;
+               }
+
+               @include respond(phone-sm){
+                width: 3rem;
+                height: 3rem;
+            }
+               @include respond(big-desktop){
+                   width: 2.7rem;
+                   height: 2.7rem;
+               }
+            }
+            
+        }
+
+        /******* Vertical Email Image *******/
+        &-info{
+            margin-top: .6rem;
+            text-decoration: none;
+            color: white;
+            font-size: 1.4rem;
+            display: block;
+            img{
+                animation: scale 1s linear .4s 3 forwards;
+                @include respond(tab-land){
+                    width: 2rem;
+                }
+                @include respond(big-desktop){
+                    width: 2rem;
+                }
+            }
+        }
+
+        /******* Vertical line image *******/
+        &-v{
+            margin-top: 4rem;
+            width: 1px;
+            height: 9.1rem;
+            @include respond(big-desktop){
+                width: 3px;
+                height: 10rem;
+            }
+        }
+
+        &-rarrow{
+            margin-top: 4rem;
+            width: 5.7rem;
+            height: 5.7rem;
+            @include respond(tab-land){
+                width: 10rem;
+                height: 10rem;
+            }
+            @include respond(phone-sm){
+                width: 8rem;
+                height: 8rem;
+            }
+            @include respond(big-desktop){
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+    }
+}
+

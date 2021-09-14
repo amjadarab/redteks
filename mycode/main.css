@@ -1,0 +1,1476 @@
+/*
+$breakpoint argument choices
+- phone
+- tap-port
+- tap-land
+- big-desktop
+*/
+@-webkit-keyframes nav-link {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes nav-link {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: normal;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+}
+
+.heading-tertiary {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+/**** text alignment ****/
+.u-center-text {
+  text-align: center;
+}
+
+/**** margin bottom ****/
+.u-margin-bottom-xs {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2.5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 7rem;
+}
+
+/**** margin top ****/
+.u-margin-top-small {
+  margin-top: 2.5rem;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem;
+}
+
+/**** display properties ****/
+.d-box {
+  display: -webkit-box;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.b-or {
+  background-color: orangered;
+}
+
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+.footer {
+  /******* Footer Body *******/
+  /******* Footer Child 1 Content *******/
+  /******* Footer Child 2 Location *******/
+}
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    padding: 4rem;
+    text-align: center;
+  }
+}
+
+.footer__logo {
+  width: 32rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    padding: 0 3rem;
+    width: 50%;
+  }
+}
+
+.footer__partners {
+  width: 27rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer__partners {
+    padding: 0 3rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    width: 50%;
+  }
+}
+
+.footer__copyright {
+  color: #000;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer__copyright {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__copyright {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .footer__copyright {
+    font-size: 1.8rem;
+  }
+}
+
+.footer__location {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer__location {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+.footer__location iframe {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer__location iframe {
+    height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__location iframe {
+    height: 25rem;
+  }
+}
+
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+.container {
+  max-width: 155rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+.header {
+  height: 100vh;
+  background-image: url(/img/headerBackground.png);
+  background-size: cover;
+  background-position: center;
+  /* a specific media query to target the phone landscape mode */
+  /******* Header Content *******/
+}
+
+@media only screen and (hover: none), only screen and (orientation: landscape) {
+  .header {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+
+.header__content {
+  max-width: 114rem;
+  position: relative;
+  margin: calc(2rem + 8vh) auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /******* Header Box *******/
+  /******* Header Box 1 elements styles *******/
+  /******* Header Box 1 elements styles *******/
+  /******* Vertical Email Image *******/
+  /******* Vertical line image *******/
+}
+
+.header__content-box--1 {
+  /******* Header Box 1 *******/
+  padding-top: 7.6rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header__content-box--1 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header__content-box--1 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 80%;
+            flex: 0 1 80%;
+    padding-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .header__content-box--1 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header__content-box--1 h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.header__content-box--2 {
+  /******* Header Box 2 *******/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .header__content-box--2 {
+    margin-right: 0rem;
+  }
+}
+
+.header__content-span {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.header__content-paragraph {
+  font-size: 1.8rem;
+  max-width: 50rem;
+  margin: 4rem 0;
+  display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header__content-paragraph {
+    font-size: 2.2rem;
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header__content-paragraph {
+    font-size: 2.5rem;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header__content-paragraph {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .header__content-paragraph {
+    font-size: 2.5rem;
+    max-width: 90%;
+  }
+}
+
+.header__content-btn {
+  font-size: 2rem;
+  color: white;
+  outline: none;
+  border: 2px solid #fff;
+  background: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.header__content-icon {
+  margin-bottom: 1.8rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header__content-icon img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header__content-icon img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header__content-icon img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .header__content-icon img {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+}
+
+.header__content-info {
+  margin-top: .6rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  display: block;
+}
+
+.header__content-info img {
+  -webkit-animation: scale 1s linear .4s 3 forwards;
+          animation: scale 1s linear .4s 3 forwards;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header__content-info img {
+    width: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .header__content-info img {
+    width: 2rem;
+  }
+}
+
+.header__content-v {
+  margin-top: 4rem;
+  width: 1px;
+  height: 9.1rem;
+}
+
+@media only screen and (min-width: 1600px) {
+  .header__content-v {
+    width: 3px;
+    height: 10rem;
+  }
+}
+
+.header__content-rarrow {
+  margin-top: 4rem;
+  width: 5.7rem;
+  height: 5.7rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header__content-rarrow {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header__content-rarrow {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .header__content-rarrow {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+.nav {
+  max-width: 114rem;
+  margin: 0 auto;
+  position: relative;
+  top: calc(2rem + 4vh);
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /***** ul list *****/
+  /***** li list *****/
+  /***** a (anchor) *****/
+  /******* hamburger button *******/
+  /******* Input Type Checkbox *******/
+  /******* Label button *******/
+  /******* Span inside the above Label button *******/
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    top: 1rem;
+    padding-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .nav__logo {
+    width: 30rem;
+  }
+}
+
+.nav__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav__list {
+    display: none;
+  }
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item::after {
+  content: "";
+  background-color: white;
+  width: 3px;
+  height: 1px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.nav__item:hover::after {
+  width: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.nav__link {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  padding: .6rem 1.75rem;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav__link {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .nav__link {
+    font-size: 1.9rem;
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .nav__link {
+    font-size: 2rem;
+  }
+}
+
+.nav__hamburger {
+  display: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav__hamburger {
+    display: inline-block;
+  }
+}
+
+.nav__checkbox {
+  display: none;
+}
+
+.nav__checkbox-btn {
+  position: relative;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  z-index: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.nav__checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.nav__checkbox-icon, .nav__checkbox-icon::after, .nav__checkbox-icon::before {
+  width: 4rem;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+.nav__checkbox-icon::before, .nav__checkbox-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.nav__checkbox-icon::before {
+  top: -1rem;
+}
+
+.nav__checkbox-icon::after {
+  top: 1rem;
+}
+
+.nav__checkbox-btn:hover .nav__checkbox-icon::before {
+  top: -1.2rem;
+}
+
+.nav__checkbox-btn:hover .nav__checkbox-icon::after {
+  top: 1.2rem;
+}
+
+.nav__checkbox:checked + .nav__checkbox-btn .nav__checkbox-icon {
+  background-color: transparent;
+}
+
+.nav__checkbox:checked + .nav__checkbox-btn .nav__checkbox-icon::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.nav__checkbox:checked + .nav__checkbox-btn .nav__checkbox-icon::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+/******* this part collapse part start at 600px *******/
+.nav__responsive {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  padding-top: 8rem;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: 100vw;
+  height: 100%;
+  background: #212429;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav__responsive {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nav__responsive-anchor {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav__responsive-anchor {
+    font-size: 2.5rem;
+  }
+}
+
+.nav__responsive-anchor:hover {
+  background-color: rgba(64, 69, 78, 0.7);
+}
+
+.nav__checkbox:checked ~ .nav__responsive {
+  left: 0;
+}
+
+.nav__checkbox:checked ~ .nav__responsive .nav__responsive-anchor {
+  -webkit-animation: nav-link .5s ease-out;
+          animation: nav-link .5s ease-out;
+  -webkit-animation-delay: calc(var(--order) * 150ms);
+          animation-delay: calc(var(--order) * 150ms);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+.price {
+  background-color: #BC3144;
+  /******** Price container ********/
+  /******** Price Squares Image ********/
+  /******** Price Content Styles ********/
+  /******** Price Box ********/
+  /******** Price Box 2 element style ********/
+}
+
+.price__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content 1fr;
+      grid-template-columns: -webkit-max-content 1fr;
+      grid-template-columns: max-content 1fr;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
+}
+
+@media only screen and (max-width: 900px) {
+  .price__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: none;
+            flex-direction: none;
+    padding: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .price__container {
+    padding: 5rem 1rem;
+  }
+}
+
+.price__squares {
+  margin-top: -7.4rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .price__squares {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .price__squares {
+    margin-top: -3rem;
+  }
+}
+
+.price__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(min-content, 55rem) 1fr;
+      grid-template-columns: minmax(-webkit-min-content, 55rem) 1fr;
+      grid-template-columns: minmax(min-content, 55rem) 1fr;
+}
+
+@media only screen and (max-width: 1200px) {
+  .price__content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .price__content {
+    padding: 1rem;
+  }
+}
+
+.price__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /******** Price Box 1 ********/
+  /******** Price Box 2 ********/
+}
+
+@media only screen and (max-width: 900px) {
+  .price__box {
+    text-align: center;
+  }
+}
+
+.price__box-1 {
+  padding-left: 9.091%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .price__box-1 {
+    padding-left: 3%;
+  }
+}
+
+.price__box-1 h2 {
+  width: 70%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .price__box-1 h2 {
+    width: 100%;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .price__box-1 h2 {
+    font-size: 4rem;
+  }
+}
+
+.price__box-1 p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .price__box-1 p {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .price__box-2 {
+    padding-left: 3%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .price__box-2 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2rem;
+  }
+}
+
+.price__button {
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  /******** whatsapp icon image in box 2 ********/
+}
+
+.price__button-icon {
+  padding-right: 1rem;
+}
+
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+.product {
+  background-color: #341B48;
+  /******** Product Content ********/
+}
+
+.product__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .product__content {
+    padding: 5rem 1rem 1rem 1rem;
+  }
+}
+
+.product p {
+  max-width: 70rem;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .product p {
+    font-size: 2.5rem;
+  }
+}
+
+/******** Product Elements (colorful squares) ********/
+.elements {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 8rem;
+  /******** Product all Boxes selector (colorful squares) ********/
+  /******** Icon selector ********/
+}
+
+@media only screen and (max-width: 600px) {
+  .elements {
+    margin-top: 5rem;
+  }
+}
+
+.elements__box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 16.666%;
+          flex: 0 1 16.666%;
+  padding: 3.5rem 0;
+  min-height: 13rem;
+  position: relative;
+  /* All h2 inside the squares selector (colorful squares) */
+  /* All Paragraphs inside the squares selector (colorful squares) */
+}
+
+@media only screen and (max-width: 900px) {
+  .elements__box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.333%;
+            flex: 0 1 33.333%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .elements__box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+
+.elements__box h2 {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media only screen and (max-width: 900px) {
+  .elements__box h2 {
+    padding-top: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .elements__box h2 {
+    padding-top: 1rem;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .elements__box h2 {
+    padding-top: 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+.elements__box p {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media only screen and (max-width: 900px) {
+  .elements__box p {
+    font-size: 1.8rem;
+  }
+}
+
+.elements__box-1 {
+  background-color: #D98044;
+}
+
+.elements__box-2 {
+  background-color: #C43964;
+}
+
+.elements__box-3 {
+  background-color: #9B2C60;
+}
+
+.elements__box-4 {
+  background-color: #872B67;
+}
+
+.elements__box-5 {
+  background-color: #63377B;
+}
+
+.elements__box-6 {
+  background-color: #D98044;
+}
+
+.elements__icon {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.elements__icon-1 {
+  width: 4.8rem;
+  height: 6rem;
+}
+
+.elements__icon-2 {
+  width: 7.7rem;
+  height: 9.6rem;
+}
+
+.elements__icon-3 {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.elements__icon-4 {
+  width: 10rem;
+  height: 12.5rem;
+}
+
+.elements__icon-5 {
+  width: 10rem;
+  height: 12.5rem;
+}
+
+.elements__icon-6 {
+  width: 6.4rem;
+  height: 8rem;
+}
+
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+.quality {
+  color: #000;
+  padding: 6rem 0 1rem 0;
+  /******** Quality content ********/
+  /******** Quality All boxes selector ********/
+  /******** Quality All Icon selector ********/
+}
+
+@media only screen and (max-width: 600px) {
+  .quality {
+    padding: 6rem 0;
+  }
+}
+
+.quality__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(22rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media only screen and (max-width: 1200px) {
+  .quality__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.quality__box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  grid-row-gap: 1rem;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /******** Quality All h2  selector ********/
+  /******** Quality All (p) paragraphs selector ********/
+  /******** Quality box 1-2-3 selector ********/
+  /******** Quality box 4-5 selector ********/
+}
+
+.quality__box:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.quality__box h2 {
+  width: 100%;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .quality__box h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.quality__box p {
+  max-width: 25rem;
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+@media only screen and (max-width: 600px) {
+  .quality__box p {
+    font-size: 2.5rem;
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .quality__box-1, .quality__box-2, .quality__box-3 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.333%;
+            flex: 0 1 33.333%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .quality__box-4, .quality__box-5 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quality__box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+.quality__icon {
+  width: 7rem;
+  height: 7rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .quality__icon {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+/****** you can find the Media Query Break Points in (mixins.scss file) ******/
+.customer {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(56%, #9B2C60), color-stop(50%, #D98044));
+  background-image: linear-gradient(90deg, #9B2C60 56%, #D98044 50%);
+  /******** Customer Content ********/
+  /******** Customer Box 1 ********/
+  /******** Customer Box 2 ********/
+  /******** Customer WhatsApp icon Image ********/
+}
+
+@media only screen and (max-width: 600px) {
+  .customer {
+    background-image: none;
+  }
+}
+
+.customer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .customer__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.customer__service {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 56%;
+          flex: 0 1 56%;
+  padding: 1rem 1rem 1rem 10rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .customer__service {
+    padding: 2rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .customer__service {
+    background-color: #9B2C60;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+.customer__service h2 {
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.customer__service p {
+  letter-spacing: 1px;
+  max-width: 60rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .customer__service p {
+    font-size: 2.2rem;
+  }
+}
+
+.customer__number {
+  background-color: #D98044;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .customer__number {
+    padding: 2rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .customer__number {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+}
+
+.customer__number h2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media only screen and (max-width: 400px) {
+  .customer__number h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.customer__icon {
+  width: 5.7rem;
+  height: 5.7rem;
+  margin-left: 5rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .customer__icon {
+    margin: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .customer__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

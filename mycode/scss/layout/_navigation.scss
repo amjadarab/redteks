@@ -1,0 +1,208 @@
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+
+.nav{
+    max-width: 114rem;
+    margin: 0 auto;
+    position: relative;
+    top: calc(2rem + 4vh);
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond(phone-lg){
+        top: 1rem;
+        padding-right:3rem ;
+    }
+
+    &__logo{
+        @include respond(phone-md){
+            width: 30rem;
+        }
+    }
+     /***** ul list *****/
+    &__list{
+        list-style: none; 
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(phone-lg){
+            display: none;
+        }
+    }
+
+    /***** li list *****/
+    &__item{
+        position: relative;
+    }
+
+    &__item::after{
+        content: "";
+        background-color: white;
+        width: 3px;
+        height: 1px;
+        transform: scale(0);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .2s ease-out;  
+        transform-origin: left;
+    }
+
+    &__item:hover::after{
+        width: 100%;
+        transform: scale(1);
+    }
+
+    /***** a (anchor) *****/
+    &__link{
+        color: white;
+        text-decoration: none;
+        transition: all .2s linear;
+        padding: .6rem 1.75rem;
+        display: inline-block;
+        font-size: 1.6rem;
+
+        @include respond(tab-land){
+            font-size: 2rem;
+        }
+        @include respond(tab-port){
+            font-size: 1.9rem;
+            padding: 0 1rem;
+         }
+        @include respond(big-desktop){
+            font-size: 2rem;
+        }
+    }
+
+
+
+
+     /******* hamburger button *******/
+     &__hamburger{
+        display: none;
+        @include respond(phone-lg){
+            display: inline-block;
+        }
+        box-sizing: content-box;
+    }
+
+    /******* Input Type Checkbox *******/
+    &__checkbox{
+        display: none;
+    }
+
+    /******* Label button *******/
+    &__checkbox-btn{
+        position: relative;
+        display: block;
+        height: 4rem;
+        width: 4rem;
+        cursor: pointer;
+        z-index: 500;
+        user-select: none;
+      
+    }
+    /******* Span inside the above Label button *******/
+    &__checkbox-icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &,
+        &::after,
+        &::before{
+            width: 4rem;
+            height: 2px;
+            border-radius: 5px;
+            background-color: $color-white;
+            display: inline-block;
+        }
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+        &::before{
+            top: -1rem;
+        }
+        &::after{
+            top: 1rem;
+        }
+    }
+    // hover effect of the hamburger menu
+    &__checkbox-btn:hover &__checkbox-icon::before{
+        top: -1.2rem;
+      
+    }
+    &__checkbox-btn:hover &__checkbox-icon::after{
+        top: 1.2rem;
+        
+    }
+    
+    
+    // X shape when you click the button
+    &__checkbox:checked + &__checkbox-btn &__checkbox-icon{
+        background-color: transparent;
+    }
+    &__checkbox:checked + &__checkbox-btn &__checkbox-icon::before{
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__checkbox:checked + &__checkbox-btn &__checkbox-icon::after{
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+}
+
+/******* this part collapse part start at 600px *******/
+.nav__responsive{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+
+    @include respond(phone-lg){
+        opacity: 1;
+        visibility: visible;
+    }
+
+    padding-top: 8rem;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    width: 100vw;
+    height: 100%;
+    background: #212429;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    z-index: 400;
+    
+    &-anchor{
+        font-size: 2rem;
+        text-decoration: none;
+        color: $color-white;
+        padding: 3rem;
+        @include respond(phone-lg){
+            font-size: 2.5rem;
+        }
+        &:hover{
+            background-color: rgba(64, 69, 78, 0.7);
+        }
+    }
+}
+
+// hamburger functionality
+.nav__checkbox:checked ~ .nav__responsive{
+    left: 0;
+}
+.nav__checkbox:checked ~ .nav__responsive .nav__responsive-anchor{
+    animation: nav-link .5s ease-out;
+    animation-delay: calc(var(--order) * 150ms);
+    animation-fill-mode: backwards;
+}
+

@@ -1,0 +1,80 @@
+/****** you can find the Media Query Break Points in (mixins.scss file) ******/
+
+
+.customer{
+    background-image: linear-gradient(90deg, #9B2C60 56%,  #D98044 50%);
+    @include respond(phone-lg){
+        background-image: none;
+    }
+
+    /******** Customer Content ********/
+    &__content{
+        display: flex;
+
+        @include respond(phone-lg){
+            flex-wrap: wrap;
+            
+        }
+    }
+
+    /******** Customer Box 1 ********/
+    &__service{
+        flex: 0 1 56%;
+        padding: 1rem 1rem 1rem 10rem;
+        @include respond(tab-port){
+            padding: 2rem;
+            flex: 0 1 50%;
+        }
+
+        @include respond(phone-lg){
+            background-color:#9B2C60 ;
+            flex: 0 1 100%;
+        }
+        h2{
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        p{
+            letter-spacing: 1px;
+            max-width: 60rem;
+            @include respond(phone-lg){
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+     /******** Customer Box 2 ********/
+    &__number{
+        background-color: #D98044;
+        flex: 1;
+        @include respond(tab-port){
+            padding: 2rem;
+            flex: 0 1 50%;
+        }
+        @include respond(phone-lg){
+            flex: 0 1 100%;
+        }
+        display: flex;
+        align-items: center;
+        h2{
+            width: max-content;
+            @include respond(phone-md){
+                font-size: 2.5rem;
+            }
+        }
+    }
+     /******** Customer WhatsApp icon Image ********/
+    &__icon{
+        width: 5.7rem;
+        height: 5.7rem;
+        margin-left:5rem;
+        margin-right: 2rem;
+        @include respond(tab-port){
+            margin: 0 1rem;
+        }
+        @include respond(phone-sm){
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
+}

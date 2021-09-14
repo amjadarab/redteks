@@ -1,0 +1,141 @@
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+
+.product{
+    background-color: #341B48;
+
+    /******** Product Content ********/
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+        @include respond(phone-lg){
+            padding: 5rem 1rem 1rem 1rem;
+        }
+    }
+
+    p{
+        max-width: 70rem;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        font-size: 1.6rem;
+        @include respond(phone-lg){
+            font-size: 2.5rem;
+        }
+    }
+}
+
+    /******** Product Elements (colorful squares) ********/
+.elements{
+    width: 100%;
+    display: flex;
+    box-sizing: content-box;
+    flex-wrap: wrap;
+    margin-top: 8rem;
+    @include respond(phone-lg){
+        margin-top: 5rem;
+    }
+    
+    /******** Product all Boxes selector (colorful squares) ********/
+    &__box{
+        flex: 0 1 16.666%;
+        padding: 3.5rem 0;
+        min-height: 13rem;
+        position: relative; 
+
+        @include respond(tab-port){
+            flex: 0 1 33.333%;
+        }
+        @include respond(phone-md){
+            flex: 0 1 50%;
+        }
+
+        /* All h2 inside the squares selector (colorful squares) */
+        h2{
+
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+            @include respond(tab-port){
+                padding-top: 1rem;
+                font-size: 2.5rem;
+            }
+
+            @include respond(phone-lg){
+                padding-top: 1rem;
+                font-size: 2rem;
+            }
+            @include respond(phone-md){
+                padding-top: 1rem;
+                font-size: 1.8rem;
+            }
+
+        }
+        /* All Paragraphs inside the squares selector (colorful squares) */
+        p{
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);  
+            font-size: 1.6rem;
+            width: max-content;
+
+            @include respond(tab-port){
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__box-1{
+        background-color: #D98044;
+    }
+    &__box-2{
+        background-color: #C43964;
+    }
+    &__box-3{
+        background-color: #9B2C60;
+    }
+    &__box-4{
+        background-color: #872B67;
+    }
+    &__box-5{
+        background-color: #63377B;
+    }
+    &__box-6{
+        background-color: #D98044;
+    }
+
+    /******** Icon selector ********/
+    &__icon{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__icon-1{
+        width: 4.8rem;
+        height: 6rem;
+    }
+    &__icon-2{
+        width: 7.7rem;
+        height: 9.6rem;
+    }
+    &__icon-3{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    &__icon-4{
+        width: 10rem;
+        height: 12.5rem;
+    }
+    &__icon-5{
+        width: 10rem;
+        height: 12.5rem;
+    }
+    &__icon-6{
+        width: 6.4rem;
+        height: 8rem;
+    }
+}

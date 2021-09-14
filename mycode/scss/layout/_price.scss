@@ -1,0 +1,126 @@
+/****** you can find the *Media Query Break Points* in (mixins.scss file) ******/
+
+.price{
+    background-color: #BC3144;
+    
+    /******** Price container ********/
+    &__container{
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: max-content;
+        @include respond(tab-port){
+            display: flex;
+            flex-direction: none;
+            padding: 3rem;
+            align-items: center;
+            justify-content: center;
+         }
+
+         @include respond(phone-lg){
+             padding: 5rem 1rem;
+        }
+        
+        
+    }
+
+    /******** Price Squares Image ********/
+    &__squares{
+        margin-top: -7.4rem;
+        width: 100%;
+
+        @include respond(tab-port){
+           display: none;
+        }
+        @include respond(big-desktop){
+            margin-top: -3rem;
+        }
+    }
+
+    /******** Price Content Styles ********/
+    &__content{
+        display: grid;
+        grid-template-columns:  minmax(min-content, 55rem) 1fr;
+
+        @include respond(tab-land){
+            grid-template-columns: 1fr;
+        }
+        @include respond(big-desktop){
+            padding: 1rem;
+        }
+
+        
+    }
+
+    /******** Price Box ********/
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include respond(tab-port){
+            text-align: center;
+         }
+
+         /******** Price Box 1 ********/
+        &-1{
+            padding-left: 9.091%;
+            @include respond(tab-land){
+                padding-left: 3%;
+            }
+            h2{
+               width: 70%;
+
+               @include respond(tab-land){
+                   width: 100%;
+                   font-size: 3rem;
+               }
+               @include respond(tab-port){
+                font-size: 4rem;
+                }
+            }
+           p{
+               margin-top:1rem;
+               font-size: 1.6rem;
+               letter-spacing: .1rem;
+
+               @include respond(phone-lg){
+                font-size: 2.5rem;
+                margin-top: 3rem;
+                }
+            }
+        }
+
+        /******** Price Box 2 ********/
+        &-2{
+            @include respond(tab-land){
+                padding-left: 3%;
+            }
+
+            @include respond(tab-port){
+                align-items: center;
+                margin-top: 2rem;
+             }
+           
+        }
+
+    }
+   
+    /******** Price Box 2 element style ********/
+    &__button{
+        background: none;
+        color: $color-white;
+        border: 1px solid $color-white;
+        padding: 1rem;
+        font-size: 1.5rem;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        /******** whatsapp icon image in box 2 ********/
+        &-icon{
+            padding-right: 1rem;
+        }
+    }
+
+    
+}
